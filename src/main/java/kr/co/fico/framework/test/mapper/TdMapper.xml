@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- description : TdMapper -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.fico.framework.test.mapper.TdMapper">
+    <select id="selectItembyUserNo" parameterType="kr.co.fico.framework.test.model.dto.SelectItembyUserNoParameter" resultType="kr.co.fico.framework.test.model.dto.SelectItembyUserNoResult">
+    <![CDATA[
+    /* 관심종목조회 */
+    SELECT
+	fdu.user_name,
+	fdu.user_id,
+	uii.item 
+FROM
+	fico.fico_demo_user fdu 
+JOIN
+	fico.user_interest_item uii
+ON
+	fdu.user_no =uii.user_no 
+WHERE
+	fdu.user_no = #{userNo}
+    ]]>
+    </select>
+</mapper>

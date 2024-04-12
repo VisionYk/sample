@@ -1,0 +1,77 @@
+server:
+  port: 25874
+  forward-headers-strategy: framework
+  shutdown: graceful
+spring:
+  application:
+    name: demo
+  profiles:
+    active: localTemp
+  datasource:
+    primary:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:54321/postgres?currentSchema=fico
+      username: postgres
+      password: postgres
+#  sql:
+#    init:
+#      mode: always
+  h2:
+    console:
+      enabled: true
+mybatis:
+  mapper-locations: classpath*:kr/co/openlabs/**/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: 'NULL'
+    default-fetch-size: 1000
+    database-id: MySQL
+  #type-aliases-package: kr.co.openlabs
+
+
+logging:
+  level:  
+    root: info  
+# eureka
+eureka:
+  client:
+    enabled: true
+    fetch-registry: false
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8181/eureka/
+  instance:
+    hostname: ${running.host:127.0.0.1}
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+    
+management:
+  metrics:
+    tags: 
+      application: ${spring.application.name}
+  endpoint:
+    info:
+      enabled: true
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+      probes:
+        enabled: true
+#  endpoints:
+#    enabled-by-default: true
+#    web:
+#      exposure:
+#        include:
+#        - health
+#        - metrics
+#        - prometheus
+#        - info
+#        - shutdown    
+    
+# Swagger-UI
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html

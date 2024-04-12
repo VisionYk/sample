@@ -1,0 +1,17 @@
+INSERT INTO COM_MSG(MSG_ID, LANG_CD, MSG_DESC, GUID, CREATER_ID) VALUES
+    ('MSG001', 'ko', '안녕하세요. {0} 1번 템플릿입니다.', 'GUID-FWK', 'FWK'),
+    ('MSG001', 'en', 'Hello. {0} No. 1 Template.', 'GUID-FWK', 'FWK'),
+    ('MSG002', 'ko', '안녕하세요. {0} 2번 템플릿입니다.', 'GUID-FWK', 'FWK'),
+    ('MSG002', 'en', 'Hello. {0} No. 2 Template.', 'GUID-FWK', 'FWK'),
+    ('MSG003', 'ko', '안녕하세요. {0} 3번 템플릿입니다.', 'GUID-FWK', 'FWK'),
+    ('MSG003', 'en', 'Hello. {0} No. 3 Template.', 'GUID-FWK', 'FWK'),
+    ('MSG004', 'ko', '안녕하세요. {0} 4번 템플릿입니다.', 'GUID-FWK', 'FWK'),
+    ('MSG004', 'en', 'Hello. {0} No. 4 Template.', 'GUID-FWK', 'FWK'),
+    ('MSG005', 'ko', '안녕하세요. {0} 5번 템플릿입니다.', 'GUID-FWK', 'FWK'),
+    ('MSG005', 'en', 'Hello. {0} No. 5 Template.', 'GUID-FWK', 'FWK'),
+    ('FWKE0001', 'ko', '{0} 처리중 오류가 발생했습니다.', 'GUID-FWK', 'FWK'),
+    ('FWKE0002', 'ko', '{0} 확인하십시오.', 'GUID-FWK', 'FWK'),
+    ('FWKE0003', 'ko', '다음 오류를 확인하십시오. {0}', 'GUID-FWK', 'FWK'),
+    ('BIZM0001', 'ko', '처리되었습니다.', 'GUID-FWK', 'FWK'),
+    ('BIZM0002', 'ko', '조회가 완료되었습니다.', 'GUID-FWK', 'FWK'),
+    ('BIZM0003', 'ko', '조회가 계속됩니다.', 'GUID-FWK', 'FWK');
